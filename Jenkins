@@ -3,12 +3,12 @@ pipeline
    
     stages
     {
-
+       agent any
         stage('Git-checkout')
         {
             steps 
             {
-               git url:'https://github.com/meghana2607/Cali_pipeline.git'
+               git url:'https://github.com/meghana2607/Test.git'
                echo"checkout successful";
                }
         }
