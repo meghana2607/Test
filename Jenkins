@@ -1,0 +1,44 @@
+pipeline
+   {
+   
+    stages
+    {
+
+        stage('Git-checkout')
+        {
+            steps 
+            {
+               git url:'https://github.com/meghana2607/Cali_pipeline.git'
+               echo"checkout successful";
+               }
+        }
+        stage('Compile') 
+        {
+            steps 
+            {
+                bat label:'',script:'mvn compile'
+                echo "Test succesful";
+            }
+        }
+        stage('Build') 
+        {
+            steps 
+            {
+            
+            bat label: '',script:'mvn clean'
+            bat label: '',script:'mvn package'
+            
+                echo "build succesful";
+             }
+          } 
+           stage('Test') 
+        {
+            steps 
+            {
+            bat label:'',script:'mvn test'
+                echo "test succesful";
+             }
+          }  
+   
+       }
+       }
