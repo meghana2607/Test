@@ -46,9 +46,10 @@ pipeline
         {
             steps 
             {
-            bat "copy target\\Jenkins .war\"${tomcatweb}\\Jenkins.war\""
-            bat "${tomcatBin}\\startup.bat"
+            sshagent{['deploy_user']}{
+            sh"scp -o strictHostKeyChecking=no webapp/target/webapp.war user/java/apache-tomcat-8.5.73/webapps"
                 echo "succesful";
+                }
              }
           }  
     }      
