@@ -1,6 +1,6 @@
-node
+node()
    {
-   agent any
+   
    
    def tomcatWeb='D:\\Auto_deployment\\apache-tomcat-8.5.73\\apache-tomcat-8.5.73\\Webapps'
     def tomcatBin='D:\\Auto_deployment\\apache-tomcat-8.5.73\\apache-tomcat-8.5.73\\bin'
