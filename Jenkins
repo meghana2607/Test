@@ -1,21 +1,24 @@
-pipeline
+node
    {
-   agent any
-    stages
-    {
-      
+   def tomcatWeb='D:\\Auto_deployment\\apache-tomcat-8.5.73\\apache-tomcat-8.5.73\\Webapps'
+    def tomcatWeb='D:\\Auto_deployment\\apache-tomcat-8.5.73\\apache-tomcat-8.5.73\\bin'
+    def tomcatStatus = ''
+  
         stage('Git-checkout')
         {
-            steps 
+            
+            steps
             {
                git url:'https://github.com/meghana2607/Test.git'
                echo"checkout successful";
-               }
-        }
+             }
+       }
         stage('Compile') 
         {
             steps 
             {
+            def mvnHome = tool name: 'maven-3',type :'maven'
+                bat "${mvnHome}/bin/mvn/mvnpackage"
                 bat label:'',script:'mvn compile'
                 echo "Test succesful";
             }
@@ -39,6 +42,15 @@ pipeline
                 echo "test succesful";
              }
           }  
+           stage('Deploy') 
+        {
+            steps 
+            {
+            bat "copy target\\Jenkins .war\"${tomcatweb}\\Jenkins.war\""
+            bat "${tomcatBin}\\startup.bat"
+                echo "succesful";
+             }
+          }  
+          
    
-       }
-       }
+ }
