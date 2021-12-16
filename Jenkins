@@ -18,8 +18,7 @@ pipeline
         {
             steps 
             {
-            def mvnHome = tool name: 'maven-3',type :'maven'
-                bat "${mvnHome}/bin/mvn/mvnpackage"
+           
                 bat label:'',script:'mvn compile'
                 echo "Test succesful";
             }
