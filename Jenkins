@@ -46,6 +46,8 @@ pipeline
         {
             steps 
             {
+             sshagent{['deploy_user']}{
+            sh"scp -o strictHostKeyChecking=no webapp/target/webapp.war user/java/apache-tomcat-8.5.73/webapps"
            
                 echo "succesful";
                 }
