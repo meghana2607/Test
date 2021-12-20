@@ -47,7 +47,7 @@ pipeline
             steps 
             {
 
-          deploy adapters: [tomcat8(path: '', url: 'http://ec2-3-145-190-166.us-east-2.compute.amazonaws.com:8080/manager/html')], contextPath: 'Test.war', war: 'target\\Test.war'
+         deploy adapters: [tomcat8(credentialsId: '11c02f43-7627-4b7c-938e-e65fa1a54e34', path: '', url: 'http://ec2-3-145-190-166.us-east-2.compute.amazonaws.com:8080/manager/html')], contextPath: 'Test.war', war: 'target\\Test.war'
            
                 echo "succesful";
                 
