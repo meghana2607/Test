@@ -94,12 +94,13 @@ border-bottom: black 2px solid;
 border-top: 2px 303030 solid;    
 font-weight: bold;  
 }    
-.button.white   
+.button.black    
 {    
-color: black;    
-background-color: FF9933;    
+color: white;    
+background-color: 303030;    
 border-bottom: black 2px solid;    
-border-top: 2px FF9933 solid;    
+border-top: 2px 303030 solid;    
+font-weight: bold;  
 }    
 .gray:active    
 {    
