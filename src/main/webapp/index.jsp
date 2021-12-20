@@ -3,6 +3,7 @@
 		<form name="calculator">
 
 			<input id="display" type="text" name="display" readonly>
+			<br>
 
 			<input class="button digits" type="button" value="1" onclick="calculator.display.value += '1'">
 			<input class="button digits" type="button" value="2" onclick="calculator.display.value += '2'">
