@@ -1,50 +1,47 @@
-
-
-
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
-</head>
-<body bgcolor="cyan">
-<center>
-<h1>Addition Program </h1>
-<form action="Addser" method="post">
-
-<input type="text" name="txtnum1" placeholder="Enter First Number" />
-<br>
-<br>
-<input type="text" name="txtnum2" placeholder="Enter Second Number" />
-<br>
-<br>
-<input type="submit" name="btnsubmit" value="+"  />
-<br>
-<br>
-<input type="submit" name="btnsubmit" value="-"  />
-<br>
-<br>
-<input type="submit" name="btnsubmit" value="*"  />
-<br>
-<br>
-<input type="submit" name="btnsubmit" value="/"  />
-<br>
-</form>
-<%
-
-if(request.getParameter("q")!=null)
-{
-	out.print("result is "+request.getParameter("q"));
-}
-
-
-
-%>
-</center>
-
-
-
-</body>
-</html>
+</style>  
+</head>  
+<body>  
+    <div class="container">  
+  <div class="calc-body">  
+    <div class="calc-screen">  
+      <div class="calc-operation"> 25 + 10 = </div>  
+      <div class="calc-typed"> 35 <span class="blink-me"> _ </span> </div>  
+    </div>  
+    <div class="calc-button-row">  
+      <div class="button c"> C </div>  
+      <div class="button l"> ? </div>  
+      <div class="button l"> % </div>  
+      <div class="button l"> / </div>  
+    </div>  
+    <div class="calc-button-row">  
+      <div class="button"> 7 </div>  
+      <div class="button"> 8 </div>  
+      <div class="button"> 9 </div>  
+      <div class="button l"> x </div>  
+    </div>  
+    <div class="calc-button-row">  
+      <div class="button"> 4 </div>  
+      <div class="button"> 5 </div>  
+      <div class="button"> 6 </div>  
+      <div class="button l"> ? </div>  
+    </div>  
+    <div class="calc-button-row">  
+      <div class="button"> 1 </div>  
+      <div class="button"> 2 </div>  
+      <div class="button"> 3 </div>  
+      <div class="button l"> + </div>  
+    </div>  
+    <div class="calc-button-row">  
+      <div class="button"> . </div>  
+      <div class="button"> 0 </div>  
+      <div class="button">  
+        < </div>  
+          <div class="button l"> = </div>  
+      </div>  
+    </div>  
+  </div>  
+</body>  
+</html>  
 
 
     
