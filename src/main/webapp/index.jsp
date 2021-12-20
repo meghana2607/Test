@@ -1,6 +1,6 @@
 <html>
 	<body>
-		<table border ="2">
+		<table border ="1">
 		
 	<div class="container">
 	<fieldset id="container">
