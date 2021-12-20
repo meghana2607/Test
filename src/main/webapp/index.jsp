@@ -15,11 +15,11 @@
 <input type="button" value="9" onClick="document.calculator.ans.value+='9'">
 <input type="button" value="-" onClick="document.calculator.ans.value+='-'">
 <input type="button" value="+" onClick="document.calculator.ans.value+='+'"><br>
-<input type="button" value="" onClick="document.calculator.ans.value+=''">
+<input type="button" value="" onClick="document.calculator.ans.value+='.'">
 <input type="button" value="/" onClick="document.calculator.ans.value+='/'">
 
 <input type="button" value="0" onClick="document.calculator.ans.value+='0'">
-<input type="reset" value="Reset">
+<input type="CLEAR" value="CLEAR">
 <input type="button" value="=" onClick="document.calculator.ans.value=eval(document.calculator.ans.value)">
 <br>Solution is <input type="textfield" name="ans" value="">
 </form>
