@@ -47,7 +47,7 @@ pipeline
             steps 
             {
              sshagent(['deploy_user']) {
-          bat label:'' ,"scp -o strictHostKeyChecking=no workspace/1/target/Test.war ec2-user@172.31.22.17:/home/ec2-user/java/apache-tomcat-8.5.73/webapps"
+          sh"scp -o strictHostKeyChecking=no workspace/1/target/Test.war ec2-user@172.31.22.17:/home/ec2-user/java/apache-tomcat-8.5.73/webapps"
            
                 echo "succesful";
                 }
