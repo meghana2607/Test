@@ -18,14 +18,16 @@
 <input type="button" value="7" onClick="document.calculator.ans.value+='7'">
 <input type="button" value="8" onClick="document.calculator.ans.value+='8'">
 <input type="button" value="9" onClick="document.calculator.ans.value+='9'">
-<input type="button" value="0" onClick="document.calculator.ans.value+='0'"><br>
+<input type="button" value="*" onClick="document.calculator.ans.value+='*'"><br>
   <input type="button" value="." onClick="document.calculator.ans.value+='.'">
-  <input type="button" value="/" onClick="document.calculator.ans.value+='/'">
-<input type="button" value="BACK" onClick="document.calculator.ans.value+=''">
-  <input type="button" value="CLEAR" onClick="document.calculator.ans.value+='CLEAR'">
+  <input type="button" value="0" onClick="document.calculator.ans.value+='0'">
+<input type="button" value="BACK" onClick="document.calculator.ans.value+=''"><br>
+  <input type="button" value="">
+  <input type="button" value="RESULT" onClick="document.calculator.ans.value+='RESULT'">
 
-  <input type="textfield" value="">
+  
 
+  
 
 
 
