@@ -139,7 +139,8 @@ line-height: 10px;
               
     
           
-               <p> <input type="button" class="button black" value="1" onclick='v("1")'>  
+               <p> <input type="button" class="button white" value="/" onclick='v("/")'> </p> 
+			 <input type="button" class="button black" value="1" onclick='v("1")'>  
                <input type="button" class="button black" value="2" onclick='v("2")'>  
                <input type="button" class="button black" value="3" onclick='v("3")'>  
                <input type="button" class="button white" value="+" onclick='v("+")'> </p>    
@@ -154,7 +155,7 @@ line-height: 10px;
                <p> <input type="button" class="button black" value="0" onclick='v("0")'>   
                <input type="button" class="button black" value="." onclick='v(".")'>  
                <input type="button" class="button black" value="C" onclick='c("")'> 
-		 <p> <input type="button" class="button white" value="/" onclick='v("/")'> </p>   								
+		   								
                <input type="button" class="button white" value="=" onclick='e()'> </p>
 								 
         </div>    
