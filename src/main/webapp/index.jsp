@@ -1,120 +1,138 @@
+
+
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-    <head>
-        <title>SampleWebApp</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        <h2>Sample Web Application To Deploy and Test</h2>
-        <br>
-    <div> click <a href="SnoopServlet">Click to Invoke a SnoopServlet</a></div>
-    <br>
-    <br>
-    
-    
-    </body>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body bgcolor="cyan">
+<center>
+<h1>Addition Program </h1>
+<form action="Addser" method="post">
+
+<input type="text" name="txtnum1" placeholder="Enter First Number" />
+<br>
+<br>
+<input type="text" name="txtnum2" placeholder="Enter Second Number" />
+<br>
+<br>
+<input type="submit" name="btnsubmit" value="+"  />
+<br>
+<br>
+<input type="submit" name="btnsubmit" value="-"  />
+<br>
+<br>
+<input type="submit" name="btnsubmit" value="*"  />
+<br>
+<br>
+<input type="submit" name="btnsubmit" value="/"  />
+<br>
+</form>
+<%
+
+if(request.getParameter("q")!=null)
+{
+	out.print("result is "+request.getParameter("q"));
+}
+
+
+
+%>
+</center>
+
+
+
+</body>
 </html>
-PK
-    WªQNkmç       welcome.jsp<%-- 
-    Document   : welcome
-    Created on : 23 Jul, 2018, 5:39:03 AM
-    Author     : aksarav
---%>
+
+
+2) create servlet class and write the following code:-
+
+package scs;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+
+@WebServlet("/Addser")
+public class Addser extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    
+    public Addser() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
+	
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		//PrintWriter out = response.getWriter();
+		int a = Integer.parseInt(request.getParameter("txtnum1"));
+		int b = Integer.parseInt(request.getParameter("txtnum2"));
+		int c=0;
+		if(request.getParameter("btnsubmit").equals("+"))
+		{
+		c= a+b;
+		}
+		else if(request.getParameter("btnsubmit").equals("-"))
+		{
+		 c=a-b;	
+		}
+		else if(request.getParameter("btnsubmit").equals("*"))
+		{
+		  c=a*b;	
+		}
+		else if(request.getParameter("btnsubmit").equals("/"))
+		{
+			c=a/b;
+		}
+		
+		response.sendRedirect("additionexample.jsp?q="+c);
+		//out.print(c);
+	}
+
+}
+
+
+Example 2:-
+
+Create a Simple Calculator using Multiple Button:-
+
+
+Create Index.jsp for designing:-
+
+
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@ page import="java.util.*" %>
-<%@ page import="java.net.InetAddress" %>
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"> 
-        <title>Sample Web Application  - SnoopServlet</title>
-        <style>
-            body{
-                font-family: 'Open Sans', sans-serif;
-            }
-            table,td,tr{
-                border: 1px solid;
-                border-collapse: collapse;
-            }
-            span{
-                font-weight: normal;
-                font-size: 16px;
-                color: black;
-            }
-            </style>
+        <title>JSP Page</title>
     </head>
     <body>
-        
-        <%
-            String hostName;
-            String serverName;
-            Date Time;
-            String Dtime;
-            hostName = InetAddress.getLocalHost().getHostName()+" with IP="+InetAddress.getLocalHost().getHostAddress()+" ";
-            serverName = System.getProperty("weblogic.Name");
-            Time = new Date();
-            Dtime = Time.toString();
-            %>
-        
-        <h2> This is a Sample Web Application - Snoop Servlet  </h2>
-        <hr>
-        
-         <div>
-            <h4>Host Name & IP Address: <span><%=  hostName %></span></h4>
-            <h4>JVM Name: <span><%=  serverName %></span></h4>
-            <h4> Date & Time: <span> <%= Dtime %> </h4>
-        </div>
-        
-        <h4>HTTP Request URL : <span><%= request.getRequestURL() %></span></h4>
-        <h4>HTTP Request Method : <span><%= request.getMethod() %></span></h4>
- 
-        <h4>HTTP Request Headers Received</h4>
-        
-        <table>
-            <% 
-                Enumeration enumeration = request.getHeaderNames(); 
-                while (enumeration.hasMoreElements()) 
-                 { 
-                  String name=(String) 
-                  enumeration.nextElement(); 
-                  String value = request.getHeader(name);
-              %>
-                <tr>
-                    <td>
-                        <%=name %>
-                    </td>
-                    <td>
-                        <%=value %>
-                    </td>
-                </tr>
-             <% } %>
-        </table>
-        
-        <h4>HTTP Cookies Received</h4>
-           
-          <table>
-               <%
-            
-            Cookie[] arr1= request.getCookies();
-            for (int i=0; i < arr1.length; i++)
-            {
-                String cookiename = arr1[i].getName();
-                String cookievalue = arr1[i].getValue();
-            
-            %>
-                <tr>
-                    <td>
-                        <%=cookiename %>
-                    </td>
-                    <td>
-                        <%=cookievalue %>
-                    </td>
-                </tr>
-             <% } %>
-        </table>  
-            
-        
-</body>
+        <form action="CalcSer" method="post">
+            <input type="text" name="txtnum1" value="<% if(request.getParameter("q")!=null) out.print(request.getParameter("q"));    %>" />
+            <br><br>
+            <input type="submit" name="btnsubmit" value="1" />
+            <input type="submit" name="btnsubmit" value="2" />
+            <input type="submit" name="btnsubmit" value="3" />
+            <input type="submit" name="btnsubmit" value="4" />
+            <br><br>
+            <input type="submit" name="btnsubmit" value="+" />
+            <input type="submit" name="btnsubmit" value="-" />
+            <input type="submit" name="btnsubmit" value="*" />
+            <input type="submit" name="btnsubmit" value="=" />
+        </form>
+    </body>
 </html>
+    
