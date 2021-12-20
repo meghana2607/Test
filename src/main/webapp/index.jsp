@@ -10,11 +10,8 @@
     <!-- CSS property to create interactive  
         calculator interface -->  
     <style>  
-body    
-{    
-background-color: tan;    
-}    
-.box    
+   
+ .box    
 {    
 background-color: #3d4543;    
 height: 300px;    
