@@ -7,9 +7,7 @@
     <title>  
          Calculator
     </title>  
-    <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">  
-    <!-- CSS property to create interactive  
-        calculator interface -->  
+ 
     <style>  
 body    
 {    
@@ -120,8 +118,8 @@ border-bottom: #303030 2px solid;
 }    
 .white:active    
 {    
-border-top: black 2px solid;    
-border-bottom: FF9933 2px solid;    
+border-top:black 2px solid;    
+border-bottom:#ff4561 2px solid;        
 }    
 p    
 {    
@@ -131,7 +129,7 @@ line-height: 10px;
 </head>  
 <body>  
     <div class = "title? align="centre">  
-        Example of Calculator using HTML  
+        Calculator 
     </div>  
     <div class="box">    
         <div class="display">  
@@ -140,11 +138,11 @@ line-height: 10px;
         <div class="keys">    
               
     
-          <p> <input type="button" class="button white" value="/" onclick='v("/")'> </p>    
+          
                <p> <input type="button" class="button black" value="1" onclick='v("1")'>  
                <input type="button" class="button black" value="2" onclick='v("2")'>  
                <input type="button" class="button black" value="3" onclick='v("3")'>  
-               <input type="button" class="button white" value="*" onclick='v("+")'> </p>    
+               <input type="button" class="button white" value="+" onclick='v("+")'> </p>    
                <p> <input type="button" class="button black" value="4" onclick='v("4")'>  
                <input type="button" class="button black" value="5" onclick='v("5")'>  
                <input type="button" class="button black" value="6" onclick='v("6")'>  
@@ -152,11 +150,13 @@ line-height: 10px;
                <p> <input type="button" class="button black" value="7" onclick='v("7")'>  
                <input type="button" class="button black" value="8" onclick='v("8")'>  
                <input type="button" class="button black" value="9" onclick='v("9")'>  
-               <input type="button" class="button white" value="+" onclick='v("-")'> </p>    
+               <input type="button" class="button white" value="*" onclick='v("*")'> </p>    
                <p> <input type="button" class="button black" value="0" onclick='v("0")'>   
                <input type="button" class="button black" value="." onclick='v(".")'>  
-               <input type="button" class="button black" value="C" onclick='c("")'>  
-               <input type="button" class="button white" value="=" onclick='e()'> </p>    
+               <input type="button" class="button black" value="C" onclick='c("")'> 
+		 <p> <input type="button" class="button white" value="/" onclick='v("/")'> </p>   								
+               <input type="button" class="button white" value="=" onclick='e()'> </p>
+								 
         </div>    
 </div>   
 </body>  
