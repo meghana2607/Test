@@ -21,9 +21,10 @@
 <input type="button" value="*" onClick="document.calculator.ans.value+='*'"><br>
   <input type="button" value="." onClick="document.calculator.ans.value+='.'">
   <input type="button" value="0" onClick="document.calculator.ans.value+='0'">
-<input type="button" value="BACK" onClick="document.calculator.ans.value+=''"><br>
-  <input type="clear" value="Clear">
-  <input type="result" value="RESULT">
+<input type="button" value="BACK" onClick="document.calculator.ans.value+=""><br>
+  <input type="button" value="CLEAR" onClick="document.calculator.ans.value+='textfield'">
+  <input type="button" value="RESULT" onClick="document.calculator.ans.value+=ans"><br>
+
 
   
 
