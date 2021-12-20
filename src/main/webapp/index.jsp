@@ -90,13 +90,13 @@ border-bottom: black 2px solid;
 }    
 .button.black    
 {    
-color: black;    
+color: white;    
 background-color: 303030;    
 border-bottom: black 2px solid;    
 border-top: 2px 303030 solid;    
 font-weight: bold;  
 }    
-.button.orange    
+.button.white   
 {    
 color: black;    
 background-color: FF9933;    
@@ -108,7 +108,7 @@ border-top: 2px FF9933 solid;
 border-top: black 2px solid;    
 border-bottom: 2px #6f6f6f solid;    
 }    
-.pink:active    
+.white:active    
 {    
 border-top:black 2px solid;    
 border-bottom:#ff4561 2px solid;    
@@ -118,7 +118,7 @@ border-bottom:#ff4561 2px solid;
 border-top: black 2px solid;    
 border-bottom: #303030 2px solid;    
 }    
-.orange:active    
+.white:active    
 {    
 border-top: black 2px solid;    
 border-bottom: FF9933 2px solid;    
@@ -140,23 +140,23 @@ line-height: 10px;
         <div class="keys">    
               
     
-<input type="button" class="button white" value="/" onclick='v("/")'> </p>    
-               <p> <input type="button" class="button black" value="7" onclick='v("7")'>  
-               <input type="button" class="button black" value="8" onclick='v("8")'>  
-               <input type="button" class="button black" value="9" onclick='v("9")'>  
-               <input type="button" class="button white" value="*" onclick='v("*")'> </p>    
-               <p> <input type="button" class="button black" value="4" onclick='v("4")'>  
-               <input type="button" class="button black" value="5" onclick='v("5")'>  
-               <input type="button" class="button black" value="6" onclick='v("6")'>  
-<input type="button" class="button pink" value="-" onclick='v("-")'> </p>    
+          <p> <input type="button" class="button white" value="/" onclick='v("/")'> </p>    
                <p> <input type="button" class="button black" value="1" onclick='v("1")'>  
                <input type="button" class="button black" value="2" onclick='v("2")'>  
                <input type="button" class="button black" value="3" onclick='v("3")'>  
-               <input type="button" class="button white" value="+" onclick='v("+")'> </p>    
+               <input type="button" class="button white" value="*" onclick='v("+")'> </p>    
+               <p> <input type="button" class="button black" value="4" onclick='v("4")'>  
+               <input type="button" class="button black" value="5" onclick='v("5")'>  
+               <input type="button" class="button black" value="6" onclick='v("6")'>  
+<input type="button" class="button white" value="-" onclick='v("-")'> </p>    
+               <p> <input type="button" class="button black" value="7" onclick='v("7")'>  
+               <input type="button" class="button black" value="8" onclick='v("8")'>  
+               <input type="button" class="button black" value="9" onclick='v("9")'>  
+               <input type="button" class="button white" value="+" onclick='v("-")'> </p>    
                <p> <input type="button" class="button black" value="0" onclick='v("0")'>   
                <input type="button" class="button black" value="." onclick='v(".")'>  
                <input type="button" class="button black" value="C" onclick='c("")'>  
-               <input type="button" class="button whitee" value="=" onclick='e()'> </p>    
+               <input type="button" class="button white" value="=" onclick='e()'> </p>    
         </div>    
 </div>   
 </body>  
