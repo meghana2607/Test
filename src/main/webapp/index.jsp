@@ -4,7 +4,7 @@
 </head>
 <body bgcolor= "#000000" text= "gold">
 <form name="calculator" >
-  <br><input type="textfield" name="ans" value="">
+  <br><input type="textfield" name="ans" value=""><br>
   
   
 <input type="button" value="1" onClick="document.calculator.ans.value+='1'">
@@ -21,10 +21,10 @@
 <input type="button" value="0" onClick="document.calculator.ans.value+='0'"><br>
   <input type="button" value="." onClick="document.calculator.ans.value+='.'">
   <input type="button" value="/" onClick="document.calculator.ans.value+='/'">
-<input type="button" value="BACK" onClick="document.calculator.ans.value+='BACK'">
+<input type="button" value="BACK" onClick="document.calculator.ans.value+=''">
   <input type="button" value="CLEAR" onClick="document.calculator.ans.value+='CLEAR'">
 
-  <input type="button" value="RESULT" onClick="document.calculator.ans.value+='RESULT'">
+  <input type="textfield" value="">
 
 
 
