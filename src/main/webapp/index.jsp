@@ -134,7 +134,7 @@ line-height: 10px;
 </head>  
 <body>  
     <div class = "title? align="centre">  
-        Calculator 
+      My  Calculator 
     </div>  
     <div class="box">    
         <div class="display">  
