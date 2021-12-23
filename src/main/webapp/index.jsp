@@ -4,8 +4,10 @@
 <html>  
     <head>  
     <meta charset="utf-8">  
-    <title>  
+    <title> <h1>
+	    
          Calculator
+	    </h1>
     </title>  
  
     <style>  
